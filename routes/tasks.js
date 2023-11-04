@@ -10,7 +10,8 @@ const Task = require('../models/task');
 router.get('/', async (req, res) => {
     try {
         const tasks = await Task.find({}, 'id text data');
-        res.json({ data: tasks });
+        const responseData = { data: tasks };
+        res.json(responseData);
     } catch (error) {
         res.status(500).json({ error: 'Errore nel recupero delle tasks' });
     }
@@ -20,7 +21,8 @@ router.get('/', async (req, res) => {
 router.get('/incomplete', async (req, res) => {
     try {
         const incompleteTasks = await Task.find({ 'data.complete': false });
-        res.status(200).json({ data: incompleteTasks });
+        const responseData = { data: incompleteTasks };
+        res.status(200).json(responseData);
     } catch (error) {
         res.status(500).json({ error: 'Errore nel recupero delle tasks incomplete' });
     }
@@ -30,7 +32,8 @@ router.get('/incomplete', async (req, res) => {
 router.get('/complete', async (req, res) => {
     try {
         const completeTasks = await Task.find({ 'data.complete': true });
-        res.status(200).json({ data: completeTasks });
+        const responseData = { data: completeTasks };
+        res.status(200).json(responseData);
     } catch (error) {
         res.status(500).json({ error: 'Errore nel recupero delle tasks complete' });
     }
@@ -59,6 +62,7 @@ router.post('/add', async (req, res) => {
         await task.save();
         res.status(200).json({ success: true, data: task });
     } catch (error) {
+        console.log(error)
         res.status(400).json({ success: false, error: 'Errore nell\'aggiunta della task' });
     }
 });

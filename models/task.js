@@ -21,7 +21,7 @@ const taskSchema = new Schema({
             default: false,
         },
         expiration: {
-            type: Date,
+            type: String,
         },
         description: {
             type: String,
