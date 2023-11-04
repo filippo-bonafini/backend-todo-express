@@ -2,12 +2,9 @@
   "name": "test-express",
   "version": "1.0.0",
   "description": "test express framework for node",
-  "main": "api/server.js",
-  "engines": {
-    "node": "18.x"
-  },
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon index.js"
   },
   "author": "fb development",
   "license": "ISC",
