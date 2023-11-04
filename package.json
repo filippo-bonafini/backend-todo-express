@@ -4,7 +4,8 @@
   "description": "test express framework for node",
   "main": "api/server.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "vercel-build": "echo hello"
   },
   "author": "fb development",
   "license": "ISC",
