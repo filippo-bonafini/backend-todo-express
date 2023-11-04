@@ -2,7 +2,7 @@
   "name": "test-express",
   "version": "1.0.0",
   "description": "test express framework for node",
-  "main": "index.js",
+  "main": "api/server.js",
   "scripts": {
     "start": "nodemon index.js"
   },

@@ -6,10 +6,10 @@ const app = express()
 const cors = require('cors');
 
 // IMPORT IL ROUTER DELLE API TASK 
-const tasksRouter = require('./routes/tasks')
+const tasksRouter = require('../routes/tasks')
 
 // CONNETTIAMOCI AL DB 
-require('./db')
+require('../db')
 
 
 
