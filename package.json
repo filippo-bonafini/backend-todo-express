@@ -4,8 +4,10 @@
   "description": "test express framework for node",
   "main": "api/server.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "vercel-build": "echo hello"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint --fix src",
+    "test": "jest"
   },
   "author": "fb development",
   "license": "ISC",
