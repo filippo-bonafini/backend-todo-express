@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "test express framework for node",
   "main": "api/server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "lint": "eslint --fix src",
-    "test": "jest"
+    "start": "nodemon src/index.js"
   },
   "author": "fb development",
   "license": "ISC",
